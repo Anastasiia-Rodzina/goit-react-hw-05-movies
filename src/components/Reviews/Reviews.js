@@ -10,10 +10,6 @@ export const Reviews = () => {
 
   const { movieId } = useParams();
 
-  const defaultImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
-  const imgURL = 'https://image.tmdb.org/t/p/w500';
-
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -31,10 +27,7 @@ export const Reviews = () => {
         setLoading(false);
       }
     };
-
-    {
-      /* <p>We don`t have any reviews for this movie</p> */
-    }
+    //   /* <p>We don`t have any reviews for this movie</p> */
 
     fetchReviews();
   }, [movieId]);

@@ -1,5 +1,3 @@
-import css from './not-found-page.module.css'
-
 const NotFoundPage = () =>{
     return (
 <>
