@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import SharedLayout from 'components/SharedLayout';
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
@@ -13,7 +13,7 @@ const ReviewsPage = lazy(() => import('pages/ReviewsPage/ReviewsPage'));
 
 export const AppRoutes = () => {
   return (
-    <div>
+    <BrowserRouter basename="/goit-react-hw-05-movies">
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
@@ -25,6 +25,6 @@ export const AppRoutes = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </div>
+    </BrowserRouter>
   );
 };
